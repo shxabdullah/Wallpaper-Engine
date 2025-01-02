@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WALLPAPER ENGINE </title>
+  <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>SportsCar Wallpapers</h1>
+      <p>Browse SportsCar wallpapers for your devices.</p>
+    </div>
+  </header>
+  
+  <nav class="nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#wallpapers">Wallpapers</a></li>
+    </ul>
+    <div class="search-bar">
+      <input id="searchinput" type="text" placeholder="Search wallpapers...">
+    </div>
+  </nav>
+
+  <main>
+    <div id="home" class="home">
+      <h2><b>Introduction</b></h2>
+      <div id="home-cars">
+        <p>Cars are one of the most common and useful modes of transportation, as well as a symbol of status, style,
+          and performance. Car wallpapers are a great way to express your passion and appreciation for cars on your desktop. 
+          In this collection, we feature the best cars wallpapers, which will make your desktop look like a car showroom. 
+          You will find wallpapers from various types and brands of cars, such as sports, luxury, classic, electric, and more. 
+          You will also see wallpapers featuring different types of cars effects, such as speed, motion blur, reflection, and more.</p>
+      </div>
+    </div>
+    <div id="about" class="slider">
+      <div class="slides">
+        <img src="images/BMW.jpg" alt="BMW">
+        <img src="images/Audi.jpg" alt="Audi">
+        <img src="images/Ferrari.jpg" alt="Ferrari">
+        <img src="images/Bugatti.jpg" alt="Bugatti">
+        <img src="images/Lamborghini.jpg" alt="Lamborghini">
+        <img src="images/Porsche.jpg" alt="Porsche">
+        <img src="images/McLaren.jpg" alt="McLaren">
+        <img src="images/Mercedes.jpg" alt="Mercedes">
+        <img src="images/Aston-Martin.jpg" alt="Aston-Martin">
+        <img src="images/Pagani.jpg" alt="Pagani">
+        <img src="images/Koenigseg.jpg" alt="Koenigsegg">
+      </div>
+    </div>
+    <br><br>
+    <div class="pic"><h1>Wallpapers</h1></div>
+    <br>
+    <div id="wallpapers" class="wallpapers">
+        <div class="image">
+          <a href="McLaren.html">
+            <img src="images/McLaren.jpg" alt="McLaren">
+            <h3>McLaren</h3>
+            <a class= "download" href="images/McLaren.jpg" download>Download</a>
+          </a>
+        </div>
+        <div class="image">
+          <a href="Audi.html">
+            <img src="images/Audi.jpg" alt="Audi">
+            <h3>Audi</h3>
+            <a class= "download" href="images/Audi.jpg" download>Download</a>
+          </a>
+        </div>
+        <div class="image">
+          <a href="BMW.html">
+            <img src="images/BMW.jpg" alt="BMW">
+            <h3>BMW</h3>
+            <a class= "download" href="images/BMW.jpg" download>Download</a>
+          </a>
+        </div>
+        <div class="image">
+          <a href="Bugatti.html">
+            <img src="images/Bugatti.jpg" alt="Bugatti">
+            <h3>Bugatti</h3>
+            <a class= "download" href="images/Bugatti.jpg" download>Download</a>
+          </a>
+        </div>
+        <div class="image">
+          <a href="Lamborghini.html">
+            <img src="images/Lamborghini.jpg" alt="Lamborghini">
+            <h3>Lamborghini</h3>
+            <a class= "download" href="images/Lamborghini.jpg" download>Download</a>
+          </a>
+        </div>
+        <div class="image">
+          <a href="Mercedes.html">
+            <img src="images/Mercedes.jpg" alt="Mercedes">
+            <h3>Mercedes</h3>
+            <a class= "download" href="images/Mercedes.jpg" download>Download</a>
+          </a>
+        </div>
+        <div class="image">
+          <a href="Ferrari.html">
+            <img src="images/Ferrari.jpg" alt="Ferrari">
+            <h3>Ferrari</h3>
+            <a class= "download" href="images/Ferrari.jpg" download>Download</a>
+          </a>
+        </div>
+        <div class="image">
+          <a href="Koenigseg.html">
+            <img src="images/Koenigseg.jpg" alt="Koenigseg">
+            <h3>Koenigseg</h3>
+            <a class= "download" href="images/Koenigseg.jpg" download>Download</a>
+          </a>
+        </div>
+        <div class="image">
+          <a href="Porsche.html">
+            <img src="images/Porsche.jpg" alt="Porsche">
+            <h3>Porsche</h3>
+            <a class= "download" href="images/Porsche.jpg" download>Download</a>
+          </a>
+        </div>
+        <div class="image">
+          <a href="Aston-Martin.html">
+            <img src="images/Aston-Martin.jpg" alt="Aston-Martin">
+            <h3>Aston-Martin</h3>
+            <a class= "download" href="images/Aston-Martin.jpg" download>Download</a>
+          </a>
+        </div>
+        <div class="image">
+          <a href="Pagani.html">
+            <img src="images/Pagani.jpg" alt="Pagani">
+            <h3>Pagani</h3>
+            <a class= "download" href="images/Pagani.jpg" download>Download</a>
+          </a>
+        </div>
+      </div>
+  <footer>
+    <p>&copy; 2024 Car Wallpapers. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const searchinput = document.getElementById("searchinput");
+    const imageCards = document.querySelectorAll(".image");
+  
+    searchinput.addEventListener("input", function () {
+      const searchQuery = searchinput.value.toLowerCase();
+  
+      imageCards.forEach((card) => {
+        const cardTitle = card.querySelector("h3").textContent.toLowerCase();
+        if (cardTitle.includes(searchQuery)) {
+          card.style.display = "block"; 
+        } else {
+          card.style.display = "none"; 
+        }
+      });
+    });
+  </script>
+  
+  <script src="index.js"></script>
+
+</body>
+</html>
